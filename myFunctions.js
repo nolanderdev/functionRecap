@@ -24,17 +24,17 @@ button.addEventListener('click', pokeChange);
 function pokeChange(){
     if(index > pokeArray.length - 1){
         index = 0;
+        historyFill(pokeArray.length - 1);
     };
     picElement.src = pokeArray[index].image;
     pokeName.innerHTML = pokeArray[index].name;
     if(index > 0){
-        histIndex = index -1;
-        historyFill();
+        historyFill(index -1);
     }
     index++;
 };
 
-function historyFill(){
-    historyPic.src = pokeArray[histIndex].image;
-    historyName.innerHTML = pokeArray[histIndex].name;
+function historyFill(index){
+    historyPic.src = pokeArray[index].image;
+    historyName.innerHTML = pokeArray[index].name;
 }
