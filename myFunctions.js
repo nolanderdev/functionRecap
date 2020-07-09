@@ -6,7 +6,7 @@ let pokeArray = [
     {name:'squirtle', image:'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png'},
 ];
 index = 0;
-histIndex = 0;
+
 
 let picElement = document.getElementById('pokePic');
 
@@ -26,10 +26,11 @@ function pokeChange(){
     };
     picElement.src = pokeArray[index].image;
     pokeName.innerHTML = pokeArray[index].name;
-    historyPic.src = pokeArray[histIndex].image;
-    historyName.innerHTML = pokeArray[histIndex].name;
-    index++;
+    
     if(index > 0){
         histIndex = index -1;
+        historyPic.src = pokeArray[histIndex].image;
+        historyName.innerHTML = pokeArray[histIndex].name;
     }
+    index++;
 };
