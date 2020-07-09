@@ -1,5 +1,5 @@
 body{
-    background-color: tomato;
+    background: linear-gradient(to left, #ff0000 0%,#f94200 100%);
 }
 
 #title {

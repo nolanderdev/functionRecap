@@ -20,17 +20,21 @@ let historyName = document.getElementById('name2')
 
 button.addEventListener('click', pokeChange);
 
+
 function pokeChange(){
     if(index > pokeArray.length - 1){
         index = 0;
     };
     picElement.src = pokeArray[index].image;
     pokeName.innerHTML = pokeArray[index].name;
-    
     if(index > 0){
         histIndex = index -1;
-        historyPic.src = pokeArray[histIndex].image;
-        historyName.innerHTML = pokeArray[histIndex].name;
+        historyFill();
     }
     index++;
 };
+
+function historyFill(){
+    historyPic.src = pokeArray[histIndex].image;
+    historyName.innerHTML = pokeArray[histIndex].name;
+}
